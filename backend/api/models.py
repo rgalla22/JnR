@@ -15,6 +15,5 @@ class ExtractedText(models.Model):
     raw_pdf = models.OneToOneField(RawPDF, on_delete=models.CASCADE, related_name='extracted_text')
     text_content = models.TextField(default="", blank=False, null=True)
 
-
 def __str__(self):
         return f"ExtractedText for {self.raw_pdf}"
